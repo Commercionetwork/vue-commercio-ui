@@ -169,7 +169,122 @@ var __vue_staticRenderFns__ = [];
     __vue_module_identifier__,
     undefined,
     server
-  );/* eslint-disable import/prefer-default-export */var components = /*#__PURE__*/Object.freeze({VueCommercioUiSample: vueCommercioUiSample});// Import vue components
+  );//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var script$1 = {
+  name: "ListView",
+  description: "Render a content as a list",
+  props: {
+    isFetching: {
+      type: Boolean,
+      default: false
+    },
+    items: {
+      type: Array,
+      default: function () { return []; }
+    },
+    emptyMessage: {
+      type: String,
+      default: "Empty list",
+      note: "The message showed if there is no item"
+    },
+    loadingMessage: {
+      type: String,
+      required: true,
+      note: "The message showed while loading"
+    }
+  },
+  data: function data() {
+    return {
+      bottomReached: false
+    };
+  },
+  watch: {
+    bottomReached: function bottomReached(value) {
+      if (value) {
+        this.$emit("bottom-reached");
+      }
+    }
+  },
+  methods: {
+    bottomVisible: function bottomVisible() {
+      if (this.isFetching) {
+        return;
+      }
+      var scrollY = Math.ceil(window.scrollY);
+      var visible = document.documentElement.clientHeight;
+      var pageHeight = document.documentElement.scrollHeight;
+      var bottomOfPage = visible + scrollY >= pageHeight;
+      this.bottomReached = bottomOfPage || pageHeight < visible;
+    }
+  },
+  created: function created() {
+    window.addEventListener("scroll", this.bottomVisible);
+  },
+  beforeDestroy: function beforeDestroy() {
+    window.removeEventListener("scroll", this.bottomVisible);
+  }
+};/* script */
+var __vue_script__$1 = script$1;
+
+/* template */
+var __vue_render__$1 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.items.length > 0)?_vm._ssrNode("<div data-test=\"items\">","</div>",[_vm._ssrNode("<ul class=\"list-group list-group-flush\">","</ul>",_vm._l((_vm.items),function(item,index){return _vm._ssrNode("<li class=\"list-group-item\">","</li>",[_vm._t("default",null,{"data":item})],2)}),0)]):_vm._e(),_vm._ssrNode(" "+((_vm.isFetching)?("<div data-test=\"loading\" class=\"com-font-s14-w700\">"+(_vm._s(_vm.loadingMessage))+"</div>"):"<!---->")+" "+((!_vm.isFetching && _vm.items.length <= 0)?("<div data-test=\"empty-list\" class=\"py-3 com-font-s14-w700\">"+(_vm._s(_vm.emptyMessage))+"</div>"):"<!---->"))],2)};
+var __vue_staticRenderFns__$1 = [];
+
+  /* style */
+  var __vue_inject_styles__$1 = undefined;
+  /* scoped */
+  var __vue_scope_id__$1 = undefined;
+  /* module identifier */
+  var __vue_module_identifier__$1 = "data-v-420dd590";
+  /* functional template */
+  var __vue_is_functional_template__$1 = false;
+  /* style inject */
+  
+  /* style inject SSR */
+  
+
+  
+  var ListView = normalizeComponent_1(
+    { render: __vue_render__$1, staticRenderFns: __vue_staticRenderFns__$1 },
+    __vue_inject_styles__$1,
+    __vue_script__$1,
+    __vue_scope_id__$1,
+    __vue_is_functional_template__$1,
+    __vue_module_identifier__$1,
+    undefined,
+    undefined
+  );/* eslint-disable import/prefer-default-export */var components = /*#__PURE__*/Object.freeze({VueCommercioUiSample: vueCommercioUiSample,ListView: ListView});// Import vue components
 
 // install function executed by Vue.use()
 function install(Vue) {
@@ -195,4 +310,4 @@ if (typeof window !== 'undefined') {
 }
 if (GlobalVue) {
   GlobalVue.use(plugin);
-}exports.VueCommercioUiSample=vueCommercioUiSample;exports.default=plugin;
+}exports.ListView=ListView;exports.VueCommercioUiSample=vueCommercioUiSample;exports.default=plugin;
