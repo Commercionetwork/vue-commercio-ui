@@ -1,25 +1,26 @@
 <template>
-  <form @submit.prevent="onSearch">
-    <div class="row d-flex align-items-center">
-      <div class="col-2 col-sm-1 d-flex justify-content-center">
-        <slot name="left-content" />
-      </div>
-      <div class="col-8 col-sm-10 d-flex justify-content-center">
+  <div class="row d-flex align-items-center">
+    <div class="col-2 col-sm-1 d-flex justify-content-center">
+      <slot name="left-content" />
+    </div>
+    <div class="col-8 col-sm-10 d-flex justify-content-center">
+      <form @submit.prevent="onSearch">
         <input
           type="text"
-          class="form-control bg-light rounded-pill com-placeholder-font"
-          :placeholder="searchMessage"
+          class="form-control bg-light rounded-pill"
+          :class="placeholderStyle"
+          :placeholder="placeholderMessage"
           v-model="query"
           aria-label="Search"
           aria-describedby="search-field"
           ref="inputSearch"
         />
-      </div>
-      <div class="col-2 col-sm-1 d-flex justify-content-center">
-        <slot name="right-content" />
-      </div>
+      </form>
     </div>
-  </form>
+    <div class="col-2 col-sm-1 d-flex justify-content-center">
+      <slot name="right-content" />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -27,10 +28,18 @@ export default {
   name: "SearchBar",
   description: "Display the search bar",
   props: {
-    searchMessage: {
+    placeholderMessage: {
       type: String,
       default: "Search...",
-      note: "The search placeholder"
+      note: "The input search placeholder"
+    },
+    placeholderStyle: {
+      type: Object,
+      default: () => ({
+        "font-size": "14px",
+        "font-weight": 300
+      }),
+      note: "The placeholder style"
     }
   },
   data() {
@@ -48,10 +57,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.com-placeholder-font {
-  font-size: 14px;
-  font-weight: 300;
-}
-</style>
