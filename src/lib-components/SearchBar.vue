@@ -1,10 +1,10 @@
 <template>
-  <div class="row d-flex align-items-center">
-    <div class="col-2 col-sm-1 d-flex justify-content-center">
-      <slot name="left-content" />
-    </div>
-    <div class="col-8 col-sm-10 d-flex justify-content-center">
-      <form @submit.prevent="onSearch">
+  <form @submit.prevent="onSearch">
+    <div class="row d-flex align-items-center">
+      <div class="col-2 col-sm-1 d-flex justify-content-center">
+        <slot name="left-content" />
+      </div>
+      <div class="col-8 col-sm-10 d-flex justify-content-center">
         <input
           type="text"
           class="form-control bg-light rounded-pill"
@@ -15,12 +15,12 @@
           aria-describedby="search-field"
           ref="inputSearch"
         />
-      </form>
+      </div>
+      <div class="col-2 col-sm-1 d-flex justify-content-center">
+        <slot name="right-content" />
+      </div>
     </div>
-    <div class="col-2 col-sm-1 d-flex justify-content-center">
-      <slot name="right-content" />
-    </div>
-  </div>
+  </form>
 </template>
 
 <script>
