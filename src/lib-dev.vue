@@ -18,7 +18,11 @@ export default {
 
 <template>
   <div class="vue-commercio-ui-lib-dev">
-    <vue-commercio-ui-sample></vue-commercio-ui-sample>
+    <list-row-col183></list-row-col183>
+    <list-row-col192></list-row-col192>
+    <list-view></list-view>
+    <nav-bar></nav-bar>
+    <search-bar></search-bar>
   </div>
 </template>
 
