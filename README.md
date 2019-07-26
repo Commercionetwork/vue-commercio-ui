@@ -1,6 +1,10 @@
 # vue-commercio-ui
 A Vue.js SFC components library
 
+## How to test components
+
+    vue serve .\src\lib-dev.vue
+
 ## How to build and publish the library
 
     # update the version number

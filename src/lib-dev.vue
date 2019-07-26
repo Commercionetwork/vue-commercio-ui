@@ -1,15 +1,13 @@
 <script>
-import { ListRowCol183 } from "./entry";
-import { ListRowCol192 } from "./entry";
 import { ListView } from "./entry";
+import { ListViewItem } from "./entry";
 import { NavBar } from "./entry";
 import { SearchBar } from "./entry";
 export default {
   name: "VueCommercioUiLibDev", // vue library dev component
   components: {
-    ListRowCol183,
-    ListRowCol192,
     ListView,
+    ListViewItem,
     NavBar,
     SearchBar
   }
@@ -17,19 +15,31 @@ export default {
 </script>
 
 <template>
-  <div class="vue-commercio-ui-lib-dev">
-    <list-row-col183></list-row-col183>
-    <list-row-col192></list-row-col192>
-    <list-view></list-view>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <list-view-item cols="3">
+          <div slot="left-content">left</div>
+          <div slot="main-content">main</div>
+          <div slot="right-content">right</div>
+        </list-view-item>
+        <list-view-item cols="4">
+          <div slot="left-content">left</div>
+          <div slot="main-content">main</div>
+          <div slot="right-content">right</div>
+        </list-view-item>
+      </div>
+    </div>
+    
     <nav-bar></nav-bar>
     <search-bar></search-bar>
   </div>
 </template>
 
-<style scoped>
-.vue-commercio-ui-lib-dev {
-  display: block;
-  width: 400px;
-  margin: 25px auto;
-}
+<style scoped></style>
+
+<style lang="scss">
+@import "./assets/scss/custom-bootstrap.scss";
+@import "./assets/scss/style.scss";
+@import "bootstrap/scss/bootstrap.scss";
 </style>
