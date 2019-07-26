@@ -7,8 +7,7 @@
       <div class="col-8 col-sm-10 d-flex justify-content-center">
         <input
           type="text"
-          class="form-control bg-light rounded-pill"
-          :class="placeholderStyle"
+          class="form-control bg-light rounded-pill com-font-s14-w300"
           :placeholder="placeholderMessage"
           v-model="query"
           aria-label="Search"
@@ -32,14 +31,6 @@ export default {
       type: String,
       default: "Search...",
       note: "The input search placeholder"
-    },
-    placeholderStyle: {
-      type: Object,
-      default: () => ({
-        "font-size": "14px",
-        "font-weight": 300
-      }),
-      note: "The placeholder style"
     }
   },
   data() {

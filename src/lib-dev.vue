@@ -32,7 +32,7 @@ export default {
     </div>
     
     <nav-bar></nav-bar>
-    <search-bar></search-bar>
+    <search-bar :placeholderMessage="'Test'"></search-bar>
   </div>
 </template>
 

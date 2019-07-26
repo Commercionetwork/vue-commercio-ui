@@ -3,7 +3,8 @@ A Vue.js SFC components library
 
 ## How to test components
 
-    vue serve .\src\lib-dev.vue
+    On Windows: `vue serve .\src\lib-dev.vue`
+    On Linux: `vue serve ./src/lib-dev.vue`
 
 ## How to build and publish the library
 
