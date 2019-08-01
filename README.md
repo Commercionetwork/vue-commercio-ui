@@ -1,4 +1,7 @@
 # vue-commercio-ui
+![GitHub release](https://img.shields.io/static/v1?label=release&message=0.1.9&color=blue)
+![GitHub license](https://img.shields.io/github/license/Commercionetwork/vue-commercio-ui)
+
 A Vue.js SFC components library
 
 ## How to test components
