@@ -1,6 +1,8 @@
 # vue-commercio-ui
-![GitHub release](https://img.shields.io/static/v1?label=release&message=0.1.9&color=blue)
-![GitHub license](https://img.shields.io/github/license/Commercionetwork/vue-commercio-ui)
+![GitHub release](https://img.shields.io/github/release/Commercionetwork/vue-commercio-ui.svg)
+![GitHub license](https://img.shields.io/github/license/Commercionetwork/vue-commercio-ui.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/Commercionetwork/vue-commercio-ui.svg)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Commercionetwork/vue-commercio-ui.svg)
 
 A Vue.js SFC components library
 
