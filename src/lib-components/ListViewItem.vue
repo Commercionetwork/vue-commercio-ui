@@ -35,13 +35,13 @@ export default {
   computed: {
     mainContent() {
       return this.cols === "3"
-        ? "col-12 col-md-9 py-1 py-md-0"
-        : "col-12 col-md-8 py-1 py-md-0";
+        ? "col-12 col-md-8 py-1 py-md-0"
+        : "col-12 col-md-9 py-1 py-md-0";
     },
     rightContent() {
       return this.cols === "3"
-        ? "col-12 col-md-2 py-1 py-md-0"
-        : "col-12 col-md-3 py-1 py-md-0";
+        ? "col-12 col-md-3 py-1 py-md-0"
+        : "col-12 col-md-2 py-1 py-md-0";
     }
   }
 };
