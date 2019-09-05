@@ -233,13 +233,13 @@ var script$1 = {
   computed: {
     mainContent: function mainContent() {
       return this.cols === "3"
-        ? "col-12 col-md-9 py-1 py-md-0"
-        : "col-12 col-md-8 py-1 py-md-0";
+        ? "col-12 col-md-8 py-1 py-md-0"
+        : "col-12 col-md-9 py-1 py-md-0";
     },
     rightContent: function rightContent() {
       return this.cols === "3"
-        ? "col-12 col-md-2 py-1 py-md-0"
-        : "col-12 col-md-3 py-1 py-md-0";
+        ? "col-12 col-md-3 py-1 py-md-0"
+        : "col-12 col-md-2 py-1 py-md-0";
     }
   }
 };/* script */
@@ -254,7 +254,7 @@ var __vue_staticRenderFns__$1 = [];
   /* scoped */
   var __vue_scope_id__$1 = undefined;
   /* module identifier */
-  var __vue_module_identifier__$1 = "data-v-5a1e5998";
+  var __vue_module_identifier__$1 = "data-v-4744d298";
   /* functional template */
   var __vue_is_functional_template__$1 = false;
   /* style inject */
