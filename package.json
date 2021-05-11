@@ -1,6 +1,6 @@
 {
   "name": "@commercio.network/vue-commercio-ui",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Vue.js SFC components library",
   "main": "dist/vue-commercio-ui.ssr.js",
   "module": "dist/vue-commercio-ui.esm.js",
@@ -16,7 +16,6 @@
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
-  "dependencies": {},
   "devDependencies": {
     "bootstrap": "^4.5.1",
     "cross-env": "^5.2.1",
